@@ -2,8 +2,8 @@
 // Created by itechbear on 9/10/15.
 //
 
-#ifndef RESULT_SET_H_
-#define RESULT_SET_H_
+#ifndef LIB_RESULT_SET_H_
+#define LIB_RESULT_SET_H_
 
 #include <queue>
 
@@ -24,4 +24,4 @@ class ResultSet {
   std::priority_queue<ResultItem, std::vector<ResultItem>, std::greater<ResultItem>> queue_;
 };
 
-#endif  // RESULT_SET_H_
+#endif  // LIB_RESULT_SET_H_

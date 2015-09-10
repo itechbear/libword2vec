@@ -2,8 +2,8 @@
 // Created by itechbear on 9/10/15.
 //
 
-#ifndef WORDS_MODEL_H_
-#define WORDS_MODEL_H_
+#ifndef LIB_WORDS_MODEL_H_
+#define LIB_WORDS_MODEL_H_
 
 #include <cassert>
 #include <string>
@@ -62,4 +62,4 @@ class WordsModel {
   std::vector<std::vector<float>> vectors_;
 };
 
-#endif  // WORDS_MODEL_H_
+#endif  // LIB_WORDS_MODEL_H_

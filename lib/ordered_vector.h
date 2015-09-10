@@ -2,8 +2,8 @@
 // Created by itechbear on 9/6/15.
 //
 
-#ifndef WORD2VEC_ORDERED_VECTOR_H_
-#define WORD2VEC_ORDERED_VECTOR_H_
+#ifndef LIB_ORDERED_VECTOR_H_
+#define LIB_ORDERED_VECTOR_H_
 
 #include <vector>
 #include <map>
@@ -54,4 +54,4 @@ class OrderedVector {
   size_t size_;
 };
 
-#endif  // WORD2VEC_ORDERED_VECTOR_H_
+#endif  // LIB_ORDERED_VECTOR_H_

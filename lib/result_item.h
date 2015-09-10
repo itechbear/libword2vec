@@ -2,8 +2,8 @@
 // Created by itechbear on 9/10/15.
 //
 
-#ifndef RESULT_ITEM_H_
-#define RESULT_ITEM_H_
+#ifndef LIB_RESULT_ITEM_H_
+#define LIB_RESULT_ITEM_H_
 
 #include <string>
 
@@ -25,4 +25,4 @@ class ResultItem {
   std::string token_;
 };
 
-#endif  // RESULT_ITEM_H_
+#endif  // LIB_RESULT_ITEM_H_
