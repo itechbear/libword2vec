@@ -1,7 +1,7 @@
 word2vec-cpp
 ============
 
-A multi-threaded word2vec model file parser written in C++11
+A multi-threaded word2vec model file parser library written in C++11
 
 Feature
 =======
