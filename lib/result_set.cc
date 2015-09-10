@@ -21,3 +21,7 @@ void ResultSet::Insert(const ResultItem &item) {
 std::priority_queue<ResultItem, std::vector<ResultItem>, std::greater<ResultItem>> &ResultSet::GetQueue() {
   return queue_;
 }
+
+const size_t ResultSet::GetCapacity() const {
+  return capacity_;
+}

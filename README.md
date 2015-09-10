@@ -14,4 +14,4 @@ How to use
 ==========
 
  - Preparing your model file by following word2vec documentation.
- - See demo.cc
+ - See src/main.cc

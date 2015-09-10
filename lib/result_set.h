@@ -13,6 +13,8 @@ class ResultSet {
  public:
   explicit ResultSet(const size_t capacity);
 
+  const size_t GetCapacity() const;
+
   void Insert(const ResultItem &item);
 
   std::priority_queue<ResultItem, std::vector<ResultItem>, std::greater<ResultItem>> &GetQueue();
