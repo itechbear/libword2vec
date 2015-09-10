@@ -3,6 +3,12 @@ word2vec-cpp
 
 A multi-threaded word2vec model file parser written in C++11
 
+Feature
+=======
+
+ - Load and parse a word2vec model file
+ - Return k closest/nearest word given a word or phrase.
+
 Requirements
 ============
 
