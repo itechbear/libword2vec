@@ -1,17 +1,20 @@
 //
-// Created by hudong on 9/10/15.
+// Created by itechbear on 9/10/15.
 //
 
 #include "words_model.h"
 
 WordsModel::WordsModel()
-    : words_(), vectors_() {
+    : model_loaded_(false), words_(), vectors_() {
 }
 
 WordsModel::~WordsModel() {
 }
 
 bool WordsModel::ParseFromFile(const std::string &filepath) {
+  // Reset containers
+  Reset();
+
   FILE *vector_file = fopen(filepath.c_str(), "rb");
 
   assert(nullptr != vector_file);
@@ -73,12 +76,20 @@ bool WordsModel::ParseFromFile(const std::string &filepath) {
   }
   vectors_.shrink_to_fit();
 
+  // Set the model_loaded_ flag.
+  model_loaded_ = true;
+
   return true;
 }
 
 bool WordsModel::GetNearestWords(const std::string &phrase,
                      const bool concurrent,
                      ResultSet *results) const {
+  if (!model_loaded_) {
+    // No model file has been loaded.
+    return false;
+  }
+
   // Split input phrase
   std::vector<std::string> tokens;
   boost::split(tokens, phrase, boost::is_any_of(" \t"));
@@ -206,4 +217,10 @@ void WordsModel::ComputeDistancesBySlice(const std::map<std::string, uint64_t> &
     }
     results->Insert(ResultItem(distance, words_.Get(i)));
   }
+}
+
+void WordsModel::Reset() {
+  vectors_.clear();
+  words_.Reset();
+  model_loaded_ = false;
 }

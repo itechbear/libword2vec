@@ -45,8 +45,15 @@ class OrderedVector {
     vector_.shrink_to_fit();
   }
 
+  void Reset() {
+    vector_.clear();
+    positions_.clear();
+    size_ = 0;
+  }
+
  private:
   OrderedVector(const OrderedVector<Element> &other);
+
   OrderedVector<Element> &operator=(const OrderedVector<Element> &other);
 
   std::vector<Element> vector_;

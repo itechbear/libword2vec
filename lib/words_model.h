@@ -57,7 +57,12 @@ class WordsModel {
                                const size_t end,
                                ResultSet *results) const;
 
+  /**
+   * @brief Prepare for parsing a new model file.
+   */
+  void Reset();
 
+  bool model_loaded_;
   OrderedVector<std::string> words_;
   std::vector<std::vector<float>> vectors_;
 };
